@@ -32,18 +32,14 @@ System.out.println("Total Person "+N);
        chkn[i]=0;
    }
 
-
-
-
-        int bp =2;
-
-
+ int bp =2;
 int finish1=0;
 int totalCost=0;
 int max=0;
 int position;
 int swap;
 int count;
+//Arrange the cost in the order
 for (int i= 0;i<N-1;i++)
    {
       position =i;
@@ -61,9 +57,7 @@ for (int i= 0;i<N-1;i++)
       }
    }
 
-
-
-// Obvious strategy:
+// Solution
 
 for(int i=0;i<bp;i++)
 {
@@ -86,7 +80,6 @@ totalCost+=arr[0];
 }
 }
 
-//console.log("Total cost",totalCost);
 System.out.println("Total cost"+totalCost);
 
 	}
