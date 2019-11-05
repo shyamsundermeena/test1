@@ -1,8 +1,11 @@
 /******************************************************************************
+Step 1. Run the code into java compiler.
+step 2. Add test case.
+step 3. Add strength of persons.
+step 4. add cost of the person.
+step5. Get the output with minimum cost
 
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
+                           
 
 *******************************************************************************/
 import java.util.Scanner;
