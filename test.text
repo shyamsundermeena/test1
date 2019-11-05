@@ -1,0 +1,92 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter test Case");
+		Scanner input = new Scanner(System.in);
+int T = input.nextInt();
+System.out.println("Total test Case "+T);
+
+
+for(int t=1;t<=T;t++){
+    System.out.println("Test Case "+t);
+    System.out.println("Enter Persons Strength");
+
+int N = input.nextInt();
+System.out.println("Total Person "+N);
+ int arr[] = new int[N];
+ int chkn[] = new int[N];
+    System.out.println("Insert all persons cost into Array");
+   for(int i=0; i<N;i++){
+       arr[i]=input.nextInt();
+       chkn[i]=0;
+   }
+
+
+
+
+        int bp =2;
+
+
+int finish1=0;
+int totalCost=0;
+int max=0;
+int position;
+int swap;
+int count;
+for (int i= 0;i<N-1;i++)
+   {
+      position =i;
+
+      for (int j= i+1;j<N;j++)
+      {
+         if(arr[position]>arr[j])
+            position=j;
+      }
+      if ( position != i )
+      {
+         swap =arr[i];
+         arr[i] = arr[position];
+         arr[position] = swap;
+      }
+   }
+
+
+
+// Obvious strategy:
+
+for(int i=0;i<bp;i++)
+{
+chkn[0]=1;finish1++;count=1;
+for(int j=N-1;count<bp && j>=0;j--)
+{
+    if(chkn[j]==0)
+    {
+        chkn[j]=1;finish1++;
+        if(count==1)  max=j;
+        count++;
+    }
+}
+totalCost+=arr[max];
+if(finish1==N) break;
+else
+{
+chkn[0]=0;finish1--;
+totalCost+=arr[0];
+}
+}
+
+//console.log("Total cost",totalCost);
+System.out.println("Total cost"+totalCost);
+
+	}
+}
+
+}
